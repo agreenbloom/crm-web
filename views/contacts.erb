@@ -6,7 +6,7 @@
 <body>
   <h1>All Contacts</h1>
   <ul>
-  <% @contacts.each do |contact| %>
+  <% $rolodex.contacs.each do |contact| %>
     <li><%= contact.first_name %> <%= contact.last_name %></li>
   <% end %>
   </ul>
