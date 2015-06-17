@@ -1,7 +1,14 @@
 
-  <h1>All Contacts</h1>
+  <h2>All Contacts</h2>
   <ul>
   <% $rolodex.contacts.each do |contact| %>
     <li><%= contact.first_name %> <%= contact.last_name %></li>
   <% end %>
+  </ul>
+
+  <ul class="contactfonts">
+    <li>Contact 1</li>
+    <li>Contact 2</li>
+    <li>Contact 3</li>
+    <li>Contact 4</li>
   </ul>
