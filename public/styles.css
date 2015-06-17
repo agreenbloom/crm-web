@@ -42,6 +42,12 @@ nav li {
   padding-right: 80px;
 }
 
+.title{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 30px;
+  color: white;
+
+}
 
 .welcome{
   margin-top: 0px;
@@ -49,6 +55,10 @@ nav li {
   text-align: center;
 }
 
+.fontc{
+ color:#01F1F1;
+
+}
 
 a:link {
  color: #800080;
@@ -86,10 +96,6 @@ h1 {
   font-size: 24px
 }
 
-h2{
-  font-family: 'PT Sans', sans-serif;
-  font-size: 24px;
-}
 
 p, ul, li, {
   font-family: sans-serif;
