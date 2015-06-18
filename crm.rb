@@ -6,7 +6,8 @@ require 'sinatra/reloader'
 
 $rolodex = Rolodex.new
 $rolodex.add_contact(Contact.new("John", "Doe", "johnD@gmail.com", "Awesome"))
-
+$rolodex.add_contact(Contact.new("Joe", "Shmo", "js@hello.com", "Hello"))
+$rolodex.add_contact(Contact.new("Peter", "Griffin", "familyguy@cartoon.com", "whatsup"))
 
 get '/' do
   @crm_app_name = "My CRM"
@@ -21,8 +22,8 @@ get '/contacts/new' do
   erb :new_contact
 end
 
-get '/contact/1' do
-  @contact = @@rolodex.find(1)
+get '/contact/:id' do
+  @contact = @@rolodex.find(params[:id].to_i)
   erb :show_contact
 end
 
