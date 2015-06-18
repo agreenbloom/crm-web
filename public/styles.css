@@ -1,7 +1,7 @@
 
 .index {
   line-height: 1.5;
-  background: url(https://snap-photos.s3.amazonaws.com/img-thumbs/960w/B8911F21A4.jpg) no-repeat;
+  background: url(https://snap-photos.s3.amazonaws.com/img-thumbs/960w/ASH3N0H2Q4.jpg) no-repeat;
   position: fixed;
   background-size: 100% 100%;
   margin: 0;
@@ -26,12 +26,16 @@
 .welcome{
   padding-bottom: 35px;
   font-size: 45px;
+  margin-top: 0px;
+  font-size: 60px;
+  text-align: center;
 }
+
 
  nav{
   background-color: rgb(11,158,141);
   padding: 2px;
-  margin: 0px
+  margin: 0px;
   width: 100%;
   display:block;
   text-align: center;
@@ -50,11 +54,13 @@ nav li {
 
 }
 
-.welcome{
-  margin-top: 0px;
-  font-size: 40px;
+.titlepg{
   text-align: center;
+  align: center;
+  font-size: 30px;
 }
+
+
 
 .fontc{
  color:#01F1F1;
@@ -94,7 +100,7 @@ body{
 
 h1, h2 {
   font-family: 'PT Sans', sans-serif;
-  font-size: 24px
+  font-size: 40px
 }
 
 
