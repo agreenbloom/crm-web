@@ -14,7 +14,6 @@
   background-color:rgba(11,158,141,0.5);
   height: 100%;
   width: 100%;
-
 }
 
 .placeholder {
@@ -50,8 +49,8 @@ nav li {
 .title{
   font-family: 'PT Sans', sans-serif;
   font-size: 30px;
-  color: white;
-
+  color: #01F1F1;
+  text-align: center;
 }
 
 .titlepg{
@@ -61,14 +60,13 @@ nav li {
 }
 
 
-
 .fontc{
  color:#01F1F1;
 
 }
 
 a:link {
- color: #800080;
+ color: #CCFFCC;
  text-decoration:none;
  cursor:pointer;
 }
@@ -100,9 +98,48 @@ body{
 
 h1, h2 {
   font-family: 'PT Sans', sans-serif;
-  font-size: 40px
+  font-size: 40px;
+  color: #01F1F1;
 }
 
+.button{
+  background-image: url(http://blog.zacscy.com/wp-content/uploads/2014/12/FamilyGuyDoNotPush.jpg);
+  background-size: cover;
+}
+
+.button input{
+  background: none;
+  border: none;
+  height: 80px;
+  width: 200px;
+  padding: 20px;
+}
+
+.field{
+  border: solid rgba(11,158,141,0.5) 5px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.ifname{
+  margin-left: 92px;
+}
+
+.ilname{
+  margin-left: 92px;
+}
+
+.inotes{
+  margin-left: 125px;
+}
+
+.iemail{
+  margin-left: 124px
+}
 
 p, ul, li, {
   font-family: sans-serif;

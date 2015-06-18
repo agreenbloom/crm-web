@@ -1,14 +1,44 @@
 
 
-<h2> Edit a Contact </h2>
+<h2 class="title"> Edit a Contact </h2>
 
 <form action="/contacts/<%= @contact.id %>" method="post">
   <input type="hidden" name="_method" value="put">
-  <input type="text" name="first_name" value="<%= @contact.first_name  %>">
-  <input type="text" name="last_name" value=" <%= @contact.last_name %>">
-  <input type="email" name="email" value="<%= @contact.email %>">
-  <input type="text" name="notes" value="<%= @contact.notes %>">
+
+  <div class ="field">
+    <label for"first-name">First Name</label>
+      <input class="ifname" type="text" name="first_name" value="<%= @contact.first_name  %>">
+  </div>
+
+  <div class ="field">
+    <label for="last-name">Last Name</label>
+      <input class="ilname" type="text" name="last_name" value=" <%= @contact.last_name %>">
+  </div>
+
+  <div class="field">
+   <label for="email">Email </label>
+      <input class="iemail"type="email" name="email" value="<%= @contact.email %>">
+   </div>
+
+ <div class="field">
+    <label for="notes">Notes</label>
+      <input class="inotes"type="text" name="notes" value="<%= @contact.notes %>">
+  </div>
+
   <input type="submit" name="Submit">
 
-</form>
-
+<div class="field">
+<table>
+    <thead><tr><th> <label class="label" for"submit">Submit</label>
+    </th>
+    </tr>
+    </thead>
+    <tr><th>
+    <button class ="button" type="submit">
+    <input type=" " name="Submit"/>
+    </button>
+    </th>
+    </tr>
+  </div>
+</table>
+ </form>
