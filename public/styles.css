@@ -141,7 +141,14 @@ h1, h2 {
   margin-left: 124px
 }
 
-p, ul, li, {
-  font-family: sans-serif;
-  font-size: 14px
+.txt{
+  font-family:'PT Sans', sans-serif;
+  font-size: 14px;
+  color:#33CC99;
+
+}
+p {
+  font-family:'PT Sans', sans-serif;
+  font-size: 14px;
+  color:#33CC99;
 }
