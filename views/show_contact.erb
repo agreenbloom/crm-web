@@ -1,6 +1,5 @@
 
  <h2 class="title">Show Contacts</h2>
-  <form action="/contacts" method="post">
 
 <h2> <strong>ID:</strong><%= @contact.id %></h2>
 <h2> <strong>First Name:</strong><%= @contact.first_name %></h2>
@@ -11,10 +10,7 @@
 <p class="txt"><%= @contact.notes %></p>
 
 
-<form action="/contacts/:id/edit<%=@contact.id%>" method="post">
-  <input type="hidden" name="_method" value"edit">
-  <input type="submit" name="Edit Contact" value="Edit Contact">
- </form>
+<a href="/contacts/<%= @contact.id %>/edit"> EDIT INFO </a>
 
 <form action="/contacts/<%= @contact.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
