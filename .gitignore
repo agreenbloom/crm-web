@@ -1,1 +1,3 @@
 .DS_Store
+.sqlite2
+.sqlite3-journal
