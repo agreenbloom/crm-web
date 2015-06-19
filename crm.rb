@@ -20,6 +20,10 @@ get '/contacts/new' do
   erb :new_contact
 end
 
+get '/contacts/show' do
+  erb :show_contact
+end
+
 get '/contacts/:id' do
   @contact = @@rolodex.find(params[:id].to_i)
   if @contact
@@ -53,6 +57,8 @@ post "/contacts" do
   @@rolodex.add_contact(new_contact)
   redirect to("/contacts")
 end
+
+
 
 put '/contacts/:id' do
   @contact = @@rolodex.find(params[:id].to_i)

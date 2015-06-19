@@ -1,8 +1,20 @@
 
-<h1> <%= @contact.first_name %> <%= @contact.last_name %> </h1>
+ <h2 class="title">Show Contacts</h2>
+  <form action="/contacts" method="post">
+
+<h2> <strong>ID:</strong><%= @@rolodex.id %></h2>
+<h2> <strong>First Name:</strong><%= @contact.first_name %></h2>
+<h2> <strong>Last Name:</strong><%= @contact.last_name %></h2>
+
 <p class="txt"><strong>Email:</strong><%= @contact.email %></p>
 <p class="txt"><strong>Note:</strong></p>
 <p class="txt"><%= @contact.notes %></p>
+
+
+<form action="/contacts/:id/edit<%=@contact.id%>" method="post">
+  <input type="hidden" name="_method" value"edit">
+  <input type="submit" name="Edit Contact" value="Edit Contact">
+ </form>
 
 <form action="/contacts/<%= @contact.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
