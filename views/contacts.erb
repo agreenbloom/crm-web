@@ -3,7 +3,6 @@
   <ul class="txt">
   <% @@rolodex.contacts.each do |contact| %>
     <li class= "txt"><%= contact.first_name %> <%= contact.last_name %></li>
+     <p><a href="/contacts/<%= contact.id %>/edit">Edit Contacts</a></p>
   <% end %>
   </ul>
-
- <p><a href="/contacts/#{:id}/edit">Edit Contacts</a></p>

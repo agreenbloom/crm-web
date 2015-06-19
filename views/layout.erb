@@ -12,9 +12,10 @@
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="/contacts">Contacts</a></li>
-      <li><a href="contacts/new">New Contact</a></li>
-      <li><a href='contacts/'#{:id}'/edit'>Edit Contacts</a></li>
-      <li><a href="contacts/show">Show All</a></li>
+      <li><a href="/contacts/new">New Contact</a></li>
+      <% if @contact %>
+          <li><a href="/contacts/<%=@contact.id%>/edit">Edit Contacts</a></li>
+     <% end %>
     </ul>
   </nav>
   </header>
