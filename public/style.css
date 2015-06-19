@@ -1,3 +1,9 @@
+h3{
+  font-family:'PT Sans', sans-serif;
+  font-size: 20px;
+  color: #33CC99;
+  border: red;
+}
 
 .index {
   line-height: 1.5;
@@ -108,11 +114,26 @@ h1, h2 {
   background-size: cover;
 }
 
+.editbutton{
+  background-image: url(http://gardendesk.typepad.com/.a/6a00e54efed40888340133f4a245f0970b-pi);
+  background-size: cover;
+}
+
+
+.editbutton input{
+  background: none;
+  border: none;
+  height: 180px;
+  width: 150px;
+  padding: 20px;
+}
+
+
 .button input{
   background: none;
   border: none;
-  height: 80px;
-  width: 200px;
+  height: 100px;
+  width: 250px;
   padding: 20px;
 }
 
@@ -146,8 +167,10 @@ h1, h2 {
   font-family:'PT Sans', sans-serif;
   font-size: 14px;
   color:#33CC99;
-
+  border: blue;
 }
+
+
 p {
   font-family:'PT Sans', sans-serif;
   font-size: 14px;

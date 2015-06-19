@@ -1,18 +1,28 @@
 
  <h2 class="title">Show Contacts</h2>
 
-<h2> <strong>ID:</strong><%= @contact.id %></h2>
-<h2> <strong>First Name:</strong><%= @contact.first_name %></h2>
-<h2> <strong>Last Name:</strong><%= @contact.last_name %></h2>
+<h3>  ID:<%= @contact.id %></h3>
+<h4 class="txt"> <strong>First Name:</strong><%= @contact.first_name %></h4>
+<h4 class="txt"> <strong>Last Name:</strong><%= @contact.last_name %></h4>
 
-<p class="txt"><strong>Email:</strong><%= @contact.email %></p>
-<p class="txt"><strong>Note:</strong></p>
-<p class="txt"><%= @contact.notes %></p>
+<h4 class="txt"><strong>Email:</strong><%= @contact.email %></h4>
+<h4 class="txt"><strong>Note:</strong> <%= @contact.notes %></h4>
 
 
-<a href="/contacts/<%= @contact.id %>/edit"> EDIT INFO </a>
+<a href="/contacts/<%= @contact.id %>/edit"> EDIT INFO<br> <img src="http://gardendesk.typepad.com/.a/6a00e54efed40888340133f4a245f0970b-pi"> </a>
+
+
+
+
 
 <form action="/contacts/<%= @contact.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
-  <input type="submit" name="Delete Contact" value="Delete Contact">
+<div class="field">
+    <label for="delete">Delete </label><br>
+    <button class ="button" type="submit">
+    <input type="Submit" name="" value=""/>
+    </button>
+     </div>
+
+
 </form>

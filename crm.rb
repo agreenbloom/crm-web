@@ -1,6 +1,3 @@
-require_relative 'rolodex'
-
-
 require 'sinatra'
 require 'sinatra/reloader'
 require 'data_mapper'
