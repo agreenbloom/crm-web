@@ -16,26 +16,11 @@ class Contact
   property :email, String
   property :notes, String
 
-  def update(first_name, last_name, email, notes)
-    @first_name = first_name.capitalize
-    @last_name = last_name.capitalize
-    @email = email
-    @notes = notes
-  end
-end
-
+ end
 
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
-
-
-
-
-
-
-@@rolodex = Rolodex.new
-@@rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
 
 get '/' do
   @crm_app_name = "My CRM"
@@ -43,7 +28,18 @@ get '/' do
 end
 
 get '/contacts' do
+  @contacts = Contact.all
   erb :contacts
+end
+
+post "/contacts" do
+  contact = Contact.create(
+    :first_name => params[:first_name],
+    :last_name => params[:last_name],
+    :email => params[:email],
+    :notes => params[:notes]
+    )
+  redirect to('/contacts')
 end
 
 get '/contacts/new' do
@@ -52,7 +48,7 @@ end
 
 
 get "/contacts/:id" do
-  @contact = @@rolodex.find(params[:id].to_i)
+  @contact = Contact.get(params[:id].to_i)
   if @contact
     erb :show_contact
   else
@@ -79,11 +75,6 @@ delete "/contacts/:id" do
   end
 end
 
-post "/contacts" do
-  new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:notes])
-  @@rolodex.add_contact(new_contact)
-  redirect to("/contacts")
-end
 
 
 
