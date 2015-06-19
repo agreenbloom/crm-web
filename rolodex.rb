@@ -6,8 +6,6 @@ class Rolodex
     @id = 1
   end
 
-
-
   def add_contact(contact)
     contact.id = @id
     @contacts << contact
@@ -22,7 +20,6 @@ class Rolodex
   def remove_contact(contact)
     @contacts.delete(contact)
   end
-
 
 
 end

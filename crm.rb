@@ -4,6 +4,7 @@ require_relative 'contact'
 require 'sinatra'
 require 'sinatra/reloader'
 
+
 @@rolodex = Rolodex.new
 @@rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
 
@@ -20,11 +21,8 @@ get '/contacts/new' do
   erb :new_contact
 end
 
-get '/contacts/show' do
-  erb :show_contact
-end
 
-get '/contacts/:id' do
+get "/contacts/:id" do
   @contact = @@rolodex.find(params[:id].to_i)
   if @contact
     erb :show_contact
